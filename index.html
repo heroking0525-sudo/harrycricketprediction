@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HARRY CRICKET PREDICTION™</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: url('back.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 25px;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 420px;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 15px;
+      overflow: hidden;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .timer {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ffcc00;
+    }
+
+    .join-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 18px;
+      background: #ff0000;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      animation: fadeInOut 2s infinite;
+      transition: background 0.3s;
+    }
+
+    .join-btn:hover {
+      background: #cc0000;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0.3; }
+      50% { opacity: 1; }
+      100% { opacity: 0.3; }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 18px;
+      }
+      .timer {
+        font-size: 18px;
+      }
+      .join-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.jpg" alt="Harry Cricket Logo">
+    </div>
+    <h1>HARRY CRICKET PREDICTION™</h1>
+    <p>56 971 subscribers</p>
+    <a href="https://t.me/+ZVi8AvofmDcwNWE1" class="join-btn">Join [HARRY CRICKET PREDICTION™] Channel</a>
+    <div class="timer" id="timer">60</div>
+  </div>
+
+  <script>
+    let time = 60;
+    const timerElement = document.getElementById("timer");
+
+    const countdown = setInterval(() => {
+      time--;
+      timerElement.textContent = time;
+
+      if (time <= 0) {
+        clearInterval(countdown);
+        timerElement.textContent = "Time Up!";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
